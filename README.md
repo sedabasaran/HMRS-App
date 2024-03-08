@@ -8,5 +8,5 @@ Postman Employers GetAll
 
 
 
-Erd diagram
-![hrms-erd](https://github.com/sedabasaran/HMRS-App/assets/58148544/7ac7f921-df33-4ad7-a709-2c4a05480620)
+Postman JobSeeker Add
+![Ekran Resmi 2024-03-08 22 29 44](https://github.com/sedabasaran/HMRS-App/assets/58148544/81ad5830-f68d-4381-89e1-8215ad95348d)
