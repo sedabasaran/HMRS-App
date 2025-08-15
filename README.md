@@ -1,7 +1,7 @@
 # HRMS (Human Resource Management System)
 
 ##  Mevcut Diller / Available Languages
-[🇹🇷 Türkçe](#türkçe) | [🇬🇧 English](#english-version)
+[🇹🇷 Türkçe](#türkçe) | [🇬🇧 English](#english)
 
 ---
 ## Demo Video
