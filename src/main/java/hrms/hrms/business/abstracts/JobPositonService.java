@@ -4,10 +4,13 @@ import java.util.List;
 
 import hrms.hrms.core.utilities.DataResult;
 import hrms.hrms.core.utilities.Result;
-import hrms.hrms.entities.concretes.JobPosition;
+import hrms.hrms.dto.JobPositionDto;
+import hrms.hrms.dto.request.CreateJobPositionRequest;
 
 public interface JobPositonService {
-	DataResult<List<JobPosition>> getAll();	
-	Result add(JobPosition jobPosition);
+	
+	Result add(CreateJobPositionRequest request);
+
+	DataResult<List<JobPositionDto>> getAll();
 
 }

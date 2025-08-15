@@ -9,8 +9,8 @@ import hrms.hrms.core.utilities.DataResult;
 import hrms.hrms.core.utilities.Result;
 import hrms.hrms.core.utilities.SuccessDataResult;
 import hrms.hrms.core.utilities.SuccessResult;
-import hrms.hrms.dataAccess.abstracts.SystemEmployeeDao;
-import hrms.hrms.entities.concretes.SystemEmployee;
+import hrms.hrms.entity.SystemEmployee;
+import hrms.hrms.repository.SystemEmployeeDao;
 
 @Service
 public class SystemEmployeeManager implements SytemEmployeeService {

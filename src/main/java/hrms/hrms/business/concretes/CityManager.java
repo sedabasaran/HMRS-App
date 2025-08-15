@@ -6,30 +6,39 @@ import org.springframework.stereotype.Service;
 
 import hrms.hrms.business.abstracts.CityService;
 import hrms.hrms.core.utilities.DataResult;
+import hrms.hrms.core.utilities.ErrorResult;
 import hrms.hrms.core.utilities.Result;
 import hrms.hrms.core.utilities.SuccessDataResult;
 import hrms.hrms.core.utilities.SuccessResult;
-import hrms.hrms.dataAccess.abstracts.CityDao;
-import hrms.hrms.entities.concretes.City;
+import hrms.hrms.dto.CityDto;
+import hrms.hrms.dto.request.CreateCityRequest;
+import hrms.hrms.entity.City;
+import hrms.hrms.repository.CityDao;
 
 @Service
 public class CityManager implements CityService {
-	private CityDao cityDao;
+
+	private final CityDao cityDao;
 
 	public CityManager(CityDao cityDao) {
-		super();
 		this.cityDao = cityDao;
 	}
 
 	@Override
-	public Result add(City city) {		
-		this.cityDao.save(city);
-		return new SuccessResult("city is adding");
+	public Result add(CreateCityRequest request) {
+		if (cityDao.findByCityName(request.getCityName()).isPresent()) {
+			return new ErrorResult("City already exists.");
+		}
+		City city = new City();
+		city.setCityName(request.getCityName());
+		cityDao.save(city);
+		return new SuccessResult("City created.");
 	}
 
 	@Override
-	public DataResult<List<City>> getAll() {
-		return new SuccessDataResult<List<City>>(this.cityDao.findAll(),"cities is listed");
+	public DataResult<List<CityDto>> getAll() {
+		var list = cityDao.findAll().stream().map(c -> new CityDto(c.getId(), c.getCityName())).toList();
+		return new SuccessDataResult<>(list, "Cities listed.");
 	}
 
 }

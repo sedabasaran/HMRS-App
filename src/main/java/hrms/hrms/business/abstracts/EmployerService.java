@@ -4,10 +4,13 @@ import java.util.List;
 
 import hrms.hrms.core.utilities.DataResult;
 import hrms.hrms.core.utilities.Result;
-import hrms.hrms.entities.concretes.Employer;
+import hrms.hrms.dto.EmployerDto;
+import hrms.hrms.dto.request.EmployerRegisterRequest;
 
 public interface EmployerService {
-	 DataResult<List<Employer>> getAll();
-	 Result add(Employer employer);
+
+	Result register(EmployerRegisterRequest request);
+
+	DataResult<List<EmployerDto>> getAll();
 
 }
