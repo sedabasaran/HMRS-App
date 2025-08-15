@@ -1,6 +1,7 @@
 package hrms.hrms.core.utilities;
 
 public class Result {
+	
 	private boolean success;
 	private String message;
 
