@@ -84,6 +84,9 @@ Proje, REST API mimarisi ile geliştirilmiş olup, **DTO**, **Request-Response P
 }
 ```
 
+## English 
+
+
 # HRMS (Human Resource Management System)
 
 ##  Project Description
