@@ -75,7 +75,7 @@ Proje, REST API mimarisi ile geliştirilmiş olup, **DTO**, **Request-Response P
 ```json
 {
     "name": "Aysu",
-    "lastName": "Ak",
+    "lastName": "Ay",
     "nationalId": "12345678901",
     "birthDate": 2000,
     "email": "aysu@example.com",
@@ -165,7 +165,7 @@ It follows the REST API architecture and implements **DTO**, **Request-Response 
 ```json
 {
     "name": "Aysu",
-    "lastName": "Ak",
+    "lastName": "Ay",
     "nationalId": "12345678901",
     "birthDate": 2000,
     "email": "aysu@example.com",
